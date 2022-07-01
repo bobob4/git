@@ -1,4 +1,4 @@
--- dex v3 from baby hamster, GetObject from synapse script hub
+-- dex v3 from babyhamster, GetObject from synapse script hub
 
 -- Cloneref support (adds support for JJsploit/Temple/Electron and other sploits that don't have cloneref or really shit versions of it.)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/CloneRef.lua", true))()
