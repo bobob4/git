@@ -819,7 +819,7 @@ end)
 
 otherTab:Line()
 
-local danceDropdown = otherTab:Dropdown("Dance", {"Disabled","1","2", "3"}, false, function(t)
+local danceDropdown = otherTab:Dropdown("Dance", {"Disabled","1","2","3","bow"}, false, function(t)
     if settingsLock then return end
     getgenv().settings.danceChoice = t
     saveSettings()
@@ -827,6 +827,10 @@ local danceDropdown = otherTab:Dropdown("Dance", {"Disabled","1","2", "3"}, fals
         Players:Chat("/e wave")
     elseif t == "1" then
         Players:Chat("/e dance")
+    elseif t == "bow" then
+        task.wait(.25)
+        --Players:Chat("/e Annyeong (안녕)") does not work?
+        Players.LocalPlayer.Character.Humanoid:PlayEmote("Annyeong (안녕)")
     else
         Players:Chat("/e dance".. t)
     end
@@ -979,6 +983,10 @@ end
 if getgenv().settings.danceChoice == "1" then
     task.wait(.25)
     Players:Chat("/e dance")
+elseif getgenv().settings.danceChoice == "bow" then
+    task.wait(.25)
+    --Players:Chat("/e Annyeong (안녕)") does not work?
+    Players.LocalPlayer.Character.Humanoid:PlayEmote("Annyeong (안녕)")
 else
     task.wait(.25)
     Players:Chat("/e dance".. getgenv().settings.danceChoice)
