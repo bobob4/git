@@ -787,7 +787,7 @@ end)
 
 serverHopTab:Toggle("Re-Execute", "Executes the script after server hop\nTurn this off if you use autoexec", getgenv().settings.reex, function(t)
     if t and not exd then
-        queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/tzechco/pls-donate-autofarm/main/script.lua'))()")
+        queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/bobob4/git/main/Pls-donate'))()")
         exd = true
     end
     if settingsLock then return end
