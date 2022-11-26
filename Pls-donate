@@ -832,13 +832,13 @@ local danceDropdown = otherTab:Dropdown("Dance", {"Disabled","1","2","3","bow","
     elseif t == "bow" then
         task.wait(0.5)
         --Players:Chat("/e Annyeong (안녕)") does not work?
-        Players.LocalPlayer.Character.Humanoid:PlayEmote("Annyeong (안녕)")
+        game.Players.LocalPlayer.Character.Humanoid:PlayEmote("Annyeong (안녕)")
     elseif t == "Heart Skip" then
         task.wait(0.5)
-        Players.LocalPlayer.Character.Humanoid:PlayEmote("Elton John - Heart Skip")
+        game.Players.LocalPlayer.Character.Humanoid:PlayEmote("Elton John - Heart Skip")
     elseif t == "Happy" then
         task.wait(0.5)
-        Players.LocalPlayer.Character.Humanoid:PlayEmote("Happy")
+        game.Players.LocalPlayer.Character.Humanoid:PlayEmote("Happy")
     else
         task.wait(0.5)
         Players:Chat("/e dance".. t)
@@ -995,13 +995,13 @@ if getgenv().settings.danceChoice == "1" then
 elseif getgenv().settings.danceChoice == "bow" then
     task.wait(1)
     --Players:Chat("/e Annyeong (안녕)") does not work?
-    Players.LocalPlayer.Character.Humanoid:PlayEmote("Annyeong (안녕)")
+    game.Players.LocalPlayer.Character.Humanoid:PlayEmote("Annyeong (안녕)")
 elseif getgenv().settings.danceChoice == "Heart Skip" then
     task.wait(1)
-    Players.LocalPlayer.Character.Humanoid:PlayEmote("Elton John - Heart Skip")
+    game.Players.LocalPlayer.Character.Humanoid:PlayEmote("Elton John - Heart Skip")
 elseif getgenv().settings.danceChoice == "Happy" then
     task.wait(1)
-    Players.LocalPlayer.Character.Humanoid:PlayEmote("Happy")
+    game.Players.LocalPlayer.Character.Humanoid:PlayEmote("Happy")
 else
     task.wait(1)
     Players:Chat("/e dance".. getgenv().settings.danceChoice)
