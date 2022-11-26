@@ -787,7 +787,7 @@ end)
 
 serverHopTab:Toggle("Re-Execute", "Executes the script after server hop\nTurn this off if you use autoexec", getgenv().settings.reex, function(t)
     if t and not exd then
-        queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/bobob4/git/main/Pls-donate'))()")
+        queueonteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/ubob7/git/main/Pls-donate'))()")
         exd = true
     end
     if settingsLock then return end
@@ -819,19 +819,28 @@ end)
 
 otherTab:Line()
 
-local danceDropdown = otherTab:Dropdown("Dance", {"Disabled","1","2","3","bow"}, false, function(t)
+local danceDropdown = otherTab:Dropdown("Dance", {"Disabled","1","2","3","bow","Elton John - Heart Skip","Happy"}, false, function(t)
     if settingsLock then return end
     getgenv().settings.danceChoice = t
     saveSettings()
     if t == "Disabled" then
+        task.wait(0.5)
         Players:Chat("/e wave")
     elseif t == "1" then
+        task.wait(0.5)
         Players:Chat("/e dance")
     elseif t == "bow" then
-        task.wait(.25)
+        task.wait(0.5)
         --Players:Chat("/e Annyeong (안녕)") does not work?
         Players.LocalPlayer.Character.Humanoid:PlayEmote("Annyeong (안녕)")
+    elseif t == "Heart Skip" then
+        task.wait(0.5)
+        Players.LocalPlayer.Character.Humanoid:PlayEmote("Elton John - Heart Skip")
+    elseif t == "Happy" then
+        task.wait(0.5)
+        Players.LocalPlayer.Character.Humanoid:PlayEmote("Happy")
     else
+        task.wait(0.5)
         Players:Chat("/e dance".. t)
     end
 end)
@@ -981,14 +990,20 @@ if getgenv().settings.signToggle and signPass then
     Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):EquipTool(Players.LocalPlayer.Backpack:FindFirstChild("DonateSign"))
 end
 if getgenv().settings.danceChoice == "1" then
-    task.wait(.25)
+    task.wait(1)
     Players:Chat("/e dance")
 elseif getgenv().settings.danceChoice == "bow" then
-    task.wait(.25)
+    task.wait(1)
     --Players:Chat("/e Annyeong (안녕)") does not work?
     Players.LocalPlayer.Character.Humanoid:PlayEmote("Annyeong (안녕)")
+elseif getgenv().settings.danceChoice == "Heart Skip" then
+    task.wait(1)
+    Players.LocalPlayer.Character.Humanoid:PlayEmote("Elton John - Heart Skip")
+elseif getgenv().settings.danceChoice == "Happy" then
+    task.wait(1)
+    Players.LocalPlayer.Character.Humanoid:PlayEmote("Happy")
 else
-    task.wait(.25)
+    task.wait(1)
     Players:Chat("/e dance".. getgenv().settings.danceChoice)
 end
 
