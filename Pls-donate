@@ -996,7 +996,7 @@ elseif getgenv().settings.danceChoice == "bow" then
     task.wait(1)
     --Players:Chat("/e Annyeong (안녕)") does not work?
     Players.LocalPlayer.Character.Humanoid:PlayEmote("Annyeong (안녕)")
-elseif getgenv().settings.danceChoice == "Heart Skip" then
+elseif getgenv().settings.danceChoice == "Elton John - Heart Skip" then
     task.wait(1)
     Players.LocalPlayer.Character.Humanoid:PlayEmote("Elton John - Heart Skip")
 elseif getgenv().settings.danceChoice == "Happy" then
