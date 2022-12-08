@@ -1,4 +1,16 @@
 function ttt()
-   return print("ttt")
+   print("ttt")
+end
+
+local function ttt2()
+   print("ttt2")
+end
+
+function ttt3()
+   return print("ttt3")
+end
+
+local function ttt4()
+   return print("ttt4")
 end
 print (121)
