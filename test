@@ -1,3 +1,4 @@
-local function ttt()
+function ttt()
    return print("ttt")
 end
+print (121)
