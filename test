@@ -1,1 +1,3 @@
-getgenv().text1 = {1, 4}
+local function ttt()
+    print("ttt")
+end
